@@ -1,12 +1,7 @@
-# Bootstrap
-app/bootstrap*
+# IDE ignore files.
+.buildpath
+.project
+.settings/
 
 # Symfony directories
-vendor/*
-*/logs/*
-*/cache/*
-web/uploads/*
-web/bundles/*
-
-# Configuration files
-app/config/parameters.ini
+vendors/*

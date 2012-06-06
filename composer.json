@@ -1,0 +1,27 @@
+{
+    "name": "hoborglabs/phabric-bundle",
+    "type": "library",
+    "description": "Phabric symfony2 bundle",
+    "keywords": ["phabric"],
+    "homepage": "http://hoborglabs.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wojtek Oledzki",
+            "email": "wojtek@hoborglabs.com",
+            "homepage": "http://wojtek.oledzki.info"
+        }
+    ],
+    "repositories": [
+        { "type": "vcs", "url": "git@github.com:benwaine/Phabric.git" }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "benwaine/phabric": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Hoborg": "src"
+        }
+    }
+}
