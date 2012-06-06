@@ -3,4 +3,4 @@ services:
         class: Hoborg\PhabricBundle\Service\Phabric
         arguments:
             - @doctrine
-            - %phabric.connection_name%
+            - %phabric.entities%

@@ -18,6 +18,8 @@ class PhabricExtension extends Extension {
 		}
 		$container->setParameter('phabric.connection_name', $config['connection_name']);
 
+		$container->setParameter('phabric.entities', $config['entities']);
+
 		$loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 		$loader->load('services.yml');
 	}

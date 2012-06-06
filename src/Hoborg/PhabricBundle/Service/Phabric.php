@@ -10,12 +10,16 @@ class Phabric {
 	 */
 	protected $phabric = null;
 
-	public function __construct($doctrine) {
-		$this->doctrine = $doctrine;
+	public function __construct($doctrine, $config) {
 
-		$db = $this->getContainer()->get('doctrine')->getConnection(self::DB_IDENTITY);
-		$datasource = new \Phabric\Datasource\Doctrine($db, $phabricConfig['entities']);
+		$this->doctrine = $doctrine;
+		$db = $doctrine->getConnection('hoborg_cmns_identity');
+		$datasource = new \Phabric\Datasource\Doctrine($db, $config);
 		$this->phabric = new \Phabric\Phabric($datasource);
+
+		foreach ($config as $key => $entity) {
+			$this->phabric->createEntity($key, $entity);
+		}
 	}
 
 	public function getPhabric() {
