@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "benwaine/phabric": "master-dev"
+        "benwaine/phabric": "dev-master"
     },
     "autoload": {
         "psr-0": {
